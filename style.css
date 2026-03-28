@@ -1,0 +1,541 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0f0f0f;
+    color: #fff;
+}
+
+/* Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background: rgba(0,0,0,0.8);
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    color: #ff3c3c;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff3c3c;
+}
+
+/* Hero */
+.hero {
+    height: calc(100vh - 80px);
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b') center/cover no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 65px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.hero .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+
+    background: #ff3c3c;
+    color: white;
+
+    text-decoration: none;   /* ❌ removes underline */
+    border-radius: 6px;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.hero .btn:hover {
+    background: #e60023;
+    transform: scale(1.05);
+}
+
+/* Sections */
+section {
+    padding: 80px 40px;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* About */
+.about {
+    text-align: center;
+    color: white;
+    padding: 40px 20px;
+}
+
+.about-page .about {
+  min-height: 80vh;
+
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+  url('images/gym.jpg');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Text */
+.about-text {
+    flex: 2;
+    text-align: center;
+    
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 10px 0;
+}
+
+/* Headings */
+.about-text h3 {
+    margin: 15px 0 8px;
+}
+
+/* List */
+.about-text ul {
+    
+    list-style: none;
+    padding: 0;
+}
+
+.about-text li {
+    margin: 6px 0;
+}
+
+.about ul {
+  list-style: disc;
+  text-align: left;
+  display: inline-block;
+  margin: 10px auto;
+  padding-left: 20px;
+}
+
+.about h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Cards (common) */
+.card {
+    background: #ded4d4;
+    padding: 30px;
+    border-radius: 10px;
+    height: 200px;
+    width: 260px;
+    text-align: center;
+    transition: 0.3s;
+    display: flex;
+    align-items: center; /* pushes content to bottom */
+    padding: 15px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+}
+
+
+.card:hover {
+    background: #b23131;
+    transform: translateY(-10px);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;   /* stack vertically */
+  align-items: center;
+  gap: 5px;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.card p {
+  margin: 0;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+/* ===== TRAINING SECTION ===== */
+
+.trainers {
+  padding: 60px 20px;
+  margin-bottom: 0; /* reduce gap */
+}
+
+.trainers .card {
+  width: 220px;
+  height: 160px;
+}
+
+.trainer-box {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: nowrap;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.training-box {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.training .card {
+    position: relative;
+    height: 220px;
+    width: 280px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Overlay */
+.training .card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+/* Text above overlay */
+.training .card h3,
+.training .card p {
+    position: relative;
+    z-index: 2;
+}
+
+/* Hover */
+.training .card:hover {
+    transform: scale(1.05);
+}
+
+
+/* ===== PLANS ===== */
+
+.plans-page ul {
+    list-style: none;   /* removes bullets */
+    padding: 0;
+}
+
+.plan-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.plan-card {
+    background: rgba(0,0,0,0.8);
+    padding: 30px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+}
+
+.plan-card.highlight {
+    transform: scale(1.05);
+    border: 2px solid #000000;
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+    background: #af7878;
+}
+
+.price {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.plan-card button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #ff3c3c;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* ===== CONTACT ===== */
+
+.contact-container {
+    display: flex;
+    flex-direction: column;   /* 🔥 main change */
+    align-items: center;
+    gap: 30px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.contact-info {
+    text-align: center;
+    flex: 1;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.contact-form {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 15px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 12px;
+    background: #ff3c3c;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/*CONTACT HOME*/
+
+.contact-preview {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* THIS IS THE MAIN FIX */
+.contact-details {
+    max-width: 500px;
+    margin: auto;
+    text-align: center;   /* center text */
+}
+/* Center each line with icon */
+.contact-details p {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 10px 0;
+}
+
+/* Heading spacing */
+.contact-details h3 {
+    margin-top: 15px;
+}
+
+/* Button */
+.contact-details .btn {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+
+/* ===== BUTTON ===== */
+
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #ff3c3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #e60023;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+}
+
+/* ===== PAGE THEMES ===== */
+
+.about-page {
+    background: url('images/about.jpg') center/cover no-repeat;
+}
+
+.services-page {
+    background: url('images/gym.jpeg') center/cover no-repeat;
+}
+
+.training-page {
+    background: linear-gradient(to right, #191e1b, #000000);
+
+    /* Background Images */
+    .bg1 {background: url('images/img1.jpeg') center/cover no-repeat;}
+    .bg2 {background: url('images/img2.jpeg') center/cover no-repeat;}
+    .bg3 {background: url('images/img3.jpeg') center/cover no-repeat;}
+    .bg4 {background: url('images/img4.jpg') center/cover no-repeat;}
+    .bg5 {background: url('images/img5.jpg') center/cover no-repeat;}
+    .bg6 {background: url('images/img6.jpeg') center/cover no-repeat;}
+
+}
+
+.plans-page {
+    background: url('images/gym2.jpg') center/cover no-repeat;
+}
+
+.contact-page {
+    background: url('images/gym3.jpg') center/cover no-repeat;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .about-img img {
+        width: 100%;
+    }
+
+    .service-box,
+    .training-box,
+    .plan-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+}
+
+/*Services*/
+
+/* Service Container */
+.service-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    max-width: 1100px;
+    margin: auto;
+    padding-top: 20px;
+}
+
+/* Card */
+.services .card {
+    height: 220px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    padding: 20px;
+    border-radius: 17px;
+}
+
+.services .card p {
+    font-size: 16px;
+    text-align: center;
+    justify-content: flex-start;
+    align-items: center;
+    line-height: 1.9;
+    margin: 0;
+}
+
+/* Featured card */
+.featured {
+    grid-column: span 2;
+    background: linear-gradient(135deg, #3cfff2, #ff7b7b);
+}
+
+/* Normal cards */
+.card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+.card:nth-child(1) { border-top: 4px solid #ff3c3c; }
+.card:nth-child(2) { border-top: 4px solid #00c6ff; }
+.card:nth-child(3) { border-top: 4px solid #f7971e; }
+.card:nth-child(4) { border-top: 4px solid #7f00ff; }
+.card:nth-child(5) { border-top: 4px solid #00ff94; }
+.card:nth-child(6) { border-top: 4px solid #ff0080; }
+
