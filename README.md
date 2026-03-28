@@ -1,4 +1,4 @@
-🏋️‍♂️ Fitzone – Fitness Website
+**🏋️‍♂️ Fitzone – Fitness Website**
 
 Fitzone is a modern and responsive fitness website designed to showcase gym services, workout programs, and membership plans. It provides users with an engaging interface, smooth navigation, and visually appealing design to enhance their fitness journey.
 
